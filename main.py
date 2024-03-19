@@ -36,22 +36,6 @@ model = genai.GenerativeModel(model_name="gemini-1.0-pro",
                               safety_settings=safety_settings)
 
 convo = model.start_chat(history=[
-  {
-    "role": "user",
-    "parts": ["hi"]
-  },
-  {
-    "role": "model",
-    "parts": ["Hello there! How can I assist you today?"]
-  },
-  {
-    "role": "user",
-    "parts": ["who are you?"]
-  },
-  {
-    "role": "model",
-    "parts": ["I am Gemini, a multimodal AI language model developed by Google. I am designed to understand and generate human language, and to provide information and answer questions to the best of my abilities."]
-  },
 ])
 
 @bot.message_handler(func=lambda m: True)
